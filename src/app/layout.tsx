@@ -1,0 +1,76 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import "./globals.css";
+import Header from "./components/Header";
+import ClientWrapper from "./components/ClientWrapper";
+import Footer from "./components/Footer";
+// import FloatingPartnershipButton from "./components/FloatingPartnershipButton"; // Kept for future use
+import TopHeader from "./components/TopHeader";
+
+// Optional (keep if you're using them somewhere)
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+// MAIN WEBSITE FONT → MONTSERRAT
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "livenlavishevents",
+  description: "livenlavishevents",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={montserrat.variable}>
+      <body className="font-[var(--font-montserrat)] bg-[#f8f9f7]">
+        <ClientWrapper>
+          {/* Floating Partnership Button (bottom-right) - Kept commented out for future use */}
+          {/* <FloatingPartnershipButton /> */}
+
+          <div className="fixed top-0 left-0 w-full z-40">
+            <TopHeader />
+          </div>
+
+          <Header />
+
+          {children}
+
+          <Footer />
+        </ClientWrapper>
+
+        {/* Zoho SalesIQ Live Chat
+        <Script id="zoho-salesiq-init" strategy="afterInteractive">
+          {`
+            window.$zoho = window.$zoho || {};
+            $zoho.salesiq = $zoho.salesiq || {
+              ready: function() {}
+            };
+          `}
+        </Script>
+
+        <Script
+          id="zsiqscript"
+          src="https://salesiq.zohopublic.com/widget?wc=siqbd63cd0cc524743693f64b737eab828e1d04ae98434fa8a1ff90fb7678e04c86"
+          strategy="afterInteractive"
+        /> */}
+      </body>
+    </html>
+  );
+}

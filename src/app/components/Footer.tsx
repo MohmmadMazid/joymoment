@@ -1,0 +1,174 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#bfa34a]/90 text-[#0e0e0e] pt-16 pb-6">
+      <div className="max-w-[1500px] mx-auto px-6 grid md:grid-cols-4 gap-14">
+
+        {/* Logo + About */}
+        <div className="">
+          <Image
+            src="/main-logo2.png"
+            alt="liveNlavish"
+            width={200}
+            height={30}
+            className=""
+          />
+          <p className="text-sm leading-relaxed text-[#0b0b0b] ">
+            Live N Lavish Events, LLC is a full service Wedding & Event Management company that 
+            provides Wedding Planning, Event Planning, Custom Event & Wedding designs, Florals,
+             Pipe & Draping, Decor Rentals, Live Entertainment, and surrounding areas. Our team prides themselves in putting
+               every client first and providing a stress-free planning experience.
+          </p>
+
+          {/* Social Icons */}
+         {/* SOCIAL ICONS */}
+                   <div className="flex items-center gap-3">
+                     <a
+                       href="https://www.facebook.com/LavishEventPlanning/"
+                       target="_blank"
+                       className="hover:text-[#bfa34a] transition"
+                     >
+                       <FaFacebookF />
+                     </a>
+                     <a
+                       href="https://www.instagram.com/live_n_lavish"
+                       target="_blank"
+                       className="hover:text-[#bfa34a] transition"
+                     >
+                       <FaInstagram />
+                     </a>
+                     <a
+                       href="https://x.com/livenlavish"
+                       target="_blank"
+                       className="hover:text-[#bfa34a] transition"
+                     >
+                       <FaTwitter />
+                     </a>
+                     
+                   </div>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="font-semibold text-lg mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/" className="hover:text-[#2a292b]">Home</Link></li>
+            <li><Link href="/about" className="hover:text-[#2a292b]">About Us</Link></li>
+            <li><Link href="/services" className="hover:text-[#2a292b]">Services</Link></li>
+            <li><Link href="/celebrations" className="hover:text-[#2a292b]">Celebrations</Link></li>
+                        <li><Link href="/portfolio" className="hover:text-[#2a292b]">Portfolio</Link></li>
+
+            <li><Link href="/contact" className="hover:text-[#2a292b]">Contact Us</Link></li>
+            <li><Link href="/lavish-branding-workshop" className="hover:text-[#2a292b]">Lavish Branding Workshop</Link></li>
+            <li><Link href="/city-entertainment-guide" className="hover:text-[#2a292b]">City Entertainment Guide</Link></li>
+                        <li><Link href="/blogs/meet-lekita-logan-range" className="hover:text-[#2a292b]">Blog</Link></li>
+
+            <li><Link href="/catalogs" className="hover:text-[#2a292b]">Catalogs</Link></li>
+
+
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h3 className="font-semibold text-lg mb-3">Our Services</h3>
+          <ul className="space-y-2 text-sm">
+            <li> <Link href="/services" className="hover:text-[#2a292b]" > Full-Service Wedding Planning & Decor </Link>
+            </li>
+            <li> <Link href="/services" className="hover:text-[#2a292b]" >Wedding Elopements & Intimate Micro Weddings </Link></li>
+            <li> <Link href="/services" className="hover:text-[#2a292b]" >Oceanfront Weddings</Link></li>
+            <li><Link href="/services" className="hover:text-[#2a292b]" > Luxury Weddings
+            </Link> </li>
+            <li><Link href="/services" className="hover:text-[#2a292b]" > Luxury Design & Decor
+
+            </Link> </li>
+            <li><Link href="/services" className="hover:text-[#2a292b]" >Custom Floral Arrangement
+            </Link> </li>
+           
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="font-semibold text-lg mb-3">Contact Us</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <span className="font-medium">Phone:</span> 561-574-1246
+            </li>
+            <li>
+              <span className="font-medium">Email:</span> hello@livenlavishevents.com
+            </li>
+            <li>
+              <span className="font-medium">Location:</span> Live N Lavish Events
+            </li>
+          </ul>
+
+          <div className="flex gap-2 mt-2">
+            <Image
+              src="/images/shop-2.jpeg"
+              alt="celebration"
+              width={600}
+              height={800}
+              className="w-[100px] h-[100px] object-cover rounded-xl "
+            />
+            <Image
+              src="/images/lavish-6.png"
+              alt="celebration"
+              width={600}
+              height={800}
+              className="w-[100px] h-[100px] object-cover rounded-xl "
+            />
+            <Image
+              src="/images/lavish-7.png"
+              alt="celebration"
+              width={600}
+              height={800}
+              className="w-[100px] h-[100px] object-cover rounded-xl"
+            />
+
+
+
+          </div>
+          <div className="flex gap-2 mt-2">  <Image
+            src="/images/lavish-8.png"
+            alt="celebration"
+            width={600}
+            height={800}
+            className="w-[100px] h-[100px] object-cover rounded-xl "
+          />
+            <Image
+              src="/images/shop-1.jpeg"
+              alt="celebration"
+              width={600}
+              height={800}
+              className="w-[100px] h-[100px] object-cover rounded-xl "
+            />
+            <Image
+              src="/images/shop-4.jpeg"
+              alt="celebration"
+              width={600}
+              height={800}
+              className="w-[100px] h-[100px] object-cover rounded-xl"
+            />
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* Bottom Section */}
+      <div className="text-center text-sm text-[#000000] mt-10 pt-4 border-t border-[#a8a29b]">
+        © {new Date().getFullYear()} livenlavishevents — All Rights Reserved.  Made by <a href="https://gemwebservices.com/" target="blank" className="font-bold"> GEM WEB SERVICES </a>
+      </div>
+    </footer>
+  );
+}
